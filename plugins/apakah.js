@@ -12,7 +12,7 @@ handler.help = ['apakah <teks>?']
 handler.tags = ['kerang']
 
 handler.command = /^apakah$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 
