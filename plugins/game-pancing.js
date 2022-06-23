@@ -382,7 +382,7 @@ handler.help = ['pancing <type>']
 handler.tags = ['game']
 handler.command = /^(pancing)$/i
 handler.register = true
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 function clockString(ms) {
