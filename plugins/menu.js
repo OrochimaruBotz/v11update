@@ -52,9 +52,9 @@ Hai, %ucapan %name! 👋
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
   footer: '\n',
-  after: `*Made With ♡*
-*%npmname* | %version
-${'```%npmdesc```'}
+  after: `*Made With ♡ by RenFunix*
+*© Flux Botz* | 1.3
+${'```WhatsApp Multi Device```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
