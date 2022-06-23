@@ -8,12 +8,12 @@ handler.before = async function (m, { user, isBotAdmin, isAdmin }) {
 
   if (chat.antiLink && isGroupLink) {
     await m.reply(`*「 ANTI LINK 」*\n\nDetected *${await conn.getName(m.sender)}* you have sent the group link!\n\nSorry you will be kicked from this group byee!`)
-    if (isAdmin) return m.reply('*Eh sorry you admins, you will not be kicked. hehe..*')
-    if (!isBotAdmin) return m.reply('*Bots are not admins, how can they kick people _-*')
+    if (isAdmin) return m.reply('*Akses Ditolak, Karena kamu adalah admin group ini*')
+    if (!isBotAdmin) return m.reply('*Bot bukan admin*')
     let linkGC = ('https://chat.whatsapp.com/' + await conn.groupInviteCode(m.chat))
     let isLinkconnGc = new RegExp(linkGC, 'i')
     let isgclink = isLinkconnGc.test(m.text)
-    if (isgclink) return m.reply('*「 ANTI LINK 」*\n\nOrder denied, bot will not kick you.\nBecause the group link itself')
+    if (isgclink) return m.reply('*「 ANTI LINK 」*\n\nBot tidak jadi kick kamu.\nKarena kamu mengirim link group ini')
     await conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
   }
   return true

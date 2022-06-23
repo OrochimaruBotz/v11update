@@ -52,7 +52,7 @@ Hai, %ucapan %name! 👋
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
   footer: '\n',
-  after: `*Made by ♡*
+  after: `*Made With ♡*
 *%npmname* | %version
 ${'```%npmdesc```'}
 `,
@@ -157,7 +157,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://aiinne.github.io/', 'Website', '', '', [
+    conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'github.com/RenFunix', 'Website', '', '', [
       ['Donate', '/donasi'],
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']

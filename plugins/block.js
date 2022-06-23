@@ -28,9 +28,9 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 		var number = text
   }
 
-  if(!text && !m.quoted) return conn.reply(m.chat, `*❏ BLOCK NUMBER*\n\n• \`\`\`\Tag user:\`\`\`\ *${usedPrefix}block @Tag*\n• \`\`\`\Type Number:\`\`\`\ *${usedPrefix}block 6289654360447*\n• \`\`\`\Block User:\`\`\`\ *(Reply Your User)*`, m)
-    if(isNaN(number)) return conn.reply(m.chat, `*❏ BLOCK NUMBER*\n\n• \`\`\`\Tag user:\`\`\`\ *${usedPrefix}block @Tag*\n• \`\`\`\Type Number:\`\`\`\ *${usedPrefix}block 6289654360447*\n• \`\`\`\Block User:\`\`\`\ *(Reply Your User)*`, m)
-    if(number.length > 15) return conn.reply(m.chat, `*❏ BLOCK NUMBER*\n\n• \`\`\`\Tag user:\`\`\`\ *${usedPrefix}block @Tag*\n• \`\`\`\Type Number:\`\`\`\ *${usedPrefix}block 6289654360447*\n• \`\`\`\Block User:\`\`\`\ *(Reply Your User)*`, m) 
+  if(!text && !m.quoted) return conn.reply(m.chat, `*❏ BLOCK NUMBER*\n\n• \`\`\`\Tag user:\`\`\`\ *${usedPrefix}block @Tag*\n• \`\`\`\Type Number:\`\`\`\ *${usedPrefix}block 6282148864989*\n• \`\`\`\Block User:\`\`\`\ *(Reply Your User)*`, m)
+    if(isNaN(number)) return conn.reply(m.chat, `*❏ BLOCK NUMBER*\n\n• \`\`\`\Tag user:\`\`\`\ *${usedPrefix}block @Tag*\n• \`\`\`\Type Number:\`\`\`\ *${usedPrefix}block 6282148864989*\n• \`\`\`\Block User:\`\`\`\ *(Reply Your User)*`, m)
+    if(number.length > 15) return conn.reply(m.chat, `*❏ BLOCK NUMBER*\n\n• \`\`\`\Tag user:\`\`\`\ *${usedPrefix}block @Tag*\n• \`\`\`\Type Number:\`\`\`\ *${usedPrefix}block 6282148864989*\n• \`\`\`\Block User:\`\`\`\ *(Reply Your User)*`, m) 
   try {
 		if(text) {
 			var user = number + '@s.whatsapp.net'
@@ -49,7 +49,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
   
 	await conn.updateBlockStatus(user, "block")
  	
- 	conn.reply(m.chat, `Berhasil memblockir @${number}`, null, {contextInfo: {
+ 	conn.reply(m.chat, `Berhasil memblokir @${number}`, null, {contextInfo: {
     mentionedJid: [user]
  	}})
 
