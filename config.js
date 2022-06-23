@@ -2,9 +2,9 @@ let fs = require('fs')
 let chalk = require('chalk')
 
 global.owner = [
-  ['6287898307350'],
-  ['6287898307350'],
-  ['6287898307350', 'Owner', true]
+  ['6282148864989'],
+  ['6282148864989'],
+  ['6282148864989', 'RenFunix`友', true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
@@ -13,6 +13,7 @@ global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
   xteam: 'https://api.xteam.xyz',
+  lolhuman: 'https://api.lolhuman.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
   bcil: 'https://75.119.137.248:21587',
   neoxr: 'https://api.neoxr.eu.org/',
@@ -25,7 +26,8 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://api.xteam.xyz': 'apikeyaine',
+  'https://api.xteam.xyz': 'MIMINETBOT',
+  'https://api.lolhuman.xyz': 'Papah-Chan',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.neoxr.eu.org/': 'jVEMyB2ITJ',
   'https://api.zeks.me': 'apikeyaine',
@@ -40,8 +42,8 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0
 const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
-  var sticker_name = '@penta_bot'
-  var sticker_author = 'penta'
+  var sticker_name = '2022'
+  var sticker_author = 'RenFunix`友'
 } else {
   var sticker_name = stickerpack.spackname
   var sticker_author = stickerpack.sauthor
@@ -58,7 +60,7 @@ fs.watchFile(file_exif, () => {
 // Sticker WM
 global.packname = sticker_name
 global.author = sticker_author
-global.wm = '© Gempy'
+global.wm = '© Flux Botz'
 
 global.multiplier = 1000 // The higher, The harder levelup
 
