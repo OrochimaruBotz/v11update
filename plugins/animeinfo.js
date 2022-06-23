@@ -24,6 +24,6 @@ let animeingfo = `✨️ *Title:* ${title}
 handler.help = ['anime <judul>']
 handler.tags = ['internet']
 handler.command = /^(anime|animeinfo)$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
