@@ -1,13 +1,13 @@
-const free = 20000
-const prem = 40000
-const limitfree = 20
-const limitprem = 40
-const moneyfree = 20000
-const moneyprem = 40000
+const free = 9999999999999
+const prem = 9999999999999
+const limitfree = 9999999999999
+const limitprem = 9999999999999
+const moneyfree = 9999999999999
+const moneyprem = 9999999999999
 
 let handler = async (m, { isPrems }) => {
-    let time = global.db.data.users[m.sender].lastmonthly + 2592000000
-  if (new Date - global.db.data.users[m.sender].lastmonthly < 2592000000) throw `Anda sudah mengklaim, klaim bulanan ini\ntunggu selama ${msToTime(time - new Date())} lagi`
+    let time = global.db.data.users[m.sender].lastmonthly + 1
+  if (new Date - global.db.data.users[m.sender].lastmonthly < 1) throw `Anda sudah mengklaim cheat reward, klaim cheat ini\ntunggu selama ${msToTime(time - new Date())} lagi`
       // conn.reply(m.chat, `Anda sudah mengklaim dan mendapatkan :`, m)
         global.db.data.users[m.sender].exp += isPrems ? prem : free
         global.db.data.users[m.sender].money += isPrems ? moneyprem : moneyfree
@@ -16,10 +16,11 @@ let handler = async (m, { isPrems }) => {
         conn.reply(m.chat, `Selamat kamu mendapatkan:\n\n+${isPrems ? prem : free} Exp\n+${isPrems ? moneyprem : moneyfree} Money\n+${isPrems ? limitprem : limitfree} Limit`, m)
         global.db.data.users[m.sender].lastmonthly = new Date * 1
     }
-handler.help = ['monthly']
-handler.tags = ['rpgabsen']
-handler.command = /^(monthly)$/i
-handler.limit = true
+handler.help = ['cheat']
+handler.tags = ['owner']
+handler.command = /^(cheat)$/i
+handler.owner = true
+handler.limit = false
 
 handler.fail = null
 
