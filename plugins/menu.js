@@ -5,7 +5,8 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
 let tags = {
-  'rpgabsen': '❏『🗡️ - ʀᴘɢ-ᴀʙsᴇɴ 』═┅',
+  'anime': '❏『 👾 - ᴀɴɪᴍᴇ 』═┅',
+  'rpgabsen': '❏『 🗡️ - ʀᴘɢ-ᴀʙsᴇɴ 』═┅',
   'rpg': '❏『 ⚔️ - ʀᴘɢ 』═┅',
   'game': '❏『 🎮 - ɢᴀᴍᴇ 』═┅',
   'xp': '❏『 📈 - ᴇxᴘ, ʟɪᴍɪᴛ 』═┅',
