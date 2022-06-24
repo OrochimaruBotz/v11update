@@ -723,11 +723,11 @@ module.exports = {
                     }
                     m.isCommand = true
                     let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
-                    if (xp > 9999999999999999999999) m.reply('Ngecit -_-') // Hehehe
+                    if (xp > 9999999999999999999999) m.reply('ɴɢᴇᴄɪᴛ -_-') // Hehehe
                     else m.exp += xp
                     if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
                      //   this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
-                        this.sendButton(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buyall* atau *${usedPrefix}hadiah*`, author, null, [['Buy Limit', '/buyall'], ['Hadiah', '/hadiah']], m)
+                        this.sendButton(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buyall* atau *${usedPrefix}hadiah*`, author, null, [['ʙᴜʏ ʟɪᴍɪᴛ', '/ʙᴜʏᴀʟʟ'], ['ʜᴀᴅɪᴀʜ', '/ʜᴀᴅɪᴀʜ']], m)
                         continue // Limit habis
                     }
                     if (plugin.level > _user.level) {
@@ -851,8 +851,8 @@ module.exports = {
                             pp = await this.profilePictureUrl(user)
                         } catch (e) {
                         } finally {
-                            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc.toString()) :
-                                (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
+                            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'ᴡᴇʟᴄᴏᴍᴇ, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc.toString()) :
+                                (chat.sBye || this.bye || conn.bye || 'ʙʏᴇ, @user!')).replace('@user', '@' + user.split('@')[0])
                             this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
                         }
                     }
@@ -920,18 +920,49 @@ conn.ws.on('CB:call', async (json) => {
 }*/
 
 global.dfail = (type, m, conn) => {
-    let msg = {
-        rowner: 'Perintah ini hanya dapat digunakan oleh _*RenFunix!*_',
-        owner: 'Perintah ini hanya dapat digunakan oleh _*RenFunix*_!',
-        mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-        premium: '*Premium*\n1 Months *IDR 5000*\n1 Years *IDR 15000*\n\nHubungi *owner* kami..', 
-        banned: 'Perintah ini hanya untuk pengguna yang terbanned..',
-        group: 'Perintah ini hanya dapat digunakan di grup!',
-        private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-        admin: 'Perintah ini hanya untuk *Admin* grup!',
-        botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
-        restrict: 'Fitur ini di *disable*!'
+  let name = conn.getName(m.sender)
+  let msg = {
+    rowner: `╭─֍〔 ıll *ᴅᴇɴɪᴇᴅ* llı 〕֍─
+⬡ ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ʀᴇɴғᴜɴɪx
+╰─────────────────֍`,
+    owner: `╭─֍〔 ıll *ᴅᴇɴɪᴇᴅ* llı 〕֍─
+⬡ ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ʀᴇɴғᴜɴɪx
+╰─────────────────֍`,
+    mods: `╭─֍〔 ıll *ᴅᴇɴɪᴇᴅ* llı 〕֍─
+⬡ ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴍᴏᴅᴇʀᴀᴛᴏʀ ʙᴏᴛ
+╰─────────────────֍`,
+    premium: `╭─֍〔 ıll 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 llı 〕֍─
+⬡ ғɪᴛᴜʀ ɪɴɪ ʜᴀɴʏᴀ ᴛᴇʀsᴇᴅɪᴀ ᴜɴᴛᴜᴋ ᴜsᴇʀ *ᴘʀᴇᴍɪᴜᴍ*
+╰─────────────────֍`,
+    banned: `╭─֍〔 ıll *ʙᴀɴɴᴇᴅ* llı 〕֍─
+⬡ ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴛᴇʀʙᴀɴɴᴇᴅ!
+╰─────────────────֍`,
+    group: `╭─֍〔 ıll 𝐆𝐑𝐎𝐔𝐏 𝐎𝐍𝐋𝐘 llı 〕֍─
+⬡ ғɪᴛᴜʀ ɪɴɪ ʜᴀɴʏᴀ ᴅᴀᴘᴀᴛ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅɪᴅᴀʟᴀᴍ ɢʀᴜᴘ!
+╰─────────────────֍`,
+    private: `╭─֍〔 ıll 𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐂𝐇𝐀𝐓 𝐎𝐍𝐋𝐘 llı 〕֍─
+⬡ ғɪᴛᴜʀ ɪɴɪ ʜᴀɴʏᴀ ᴅᴀᴘᴀᴛ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅɪᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ
+╰─────────────────֍`,
+    admin: `╭─֍〔 ıll *ᴀᴅᴍɪɴ* llı 〕֍─
+⬡ ғɪᴛᴜʀ ɪɴɪ ʜᴀɴʏᴀ ᴛᴇʀsᴇᴅɪᴀ ᴜɴᴛᴜᴋ ᴀᴅᴍɪɴ ɢʀᴜᴘ!
+╰─────────────────֍`,
+    botAdmin: `╭─֍〔 ıll 𝐀𝐂𝐂𝐄𝐒𝐒 𝐃𝐄𝐍𝐈𝐄𝐃 llı 〕֍─
+⬡ ғɪᴛᴜʀ ɪɴɪ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ʙᴇᴋᴇʀᴊᴀ, ᴋᴀʀᴇɴᴀ ʙᴏᴛ ʙᴜᴋᴀɴ ᴀᴅᴍɪɴ!
+╰─────────────────֍`,
+    unreg: `
+┏━━━〔 ıll 𝐔𝐍𝐑𝐄𝐆𝐈𝐒𝐓𝐄𝐑 llı 〕━━㉿
+⬡ ʜᴀɪ 👋, @${m.sender.split`@`[0]}
+⬡ sᴇʙᴇʟᴜᴍ ᴍᴇʟɪʜᴀᴛ ғɪᴛᴜʀ ʙᴏᴛ, ʟᴇʙɪʜ ʙᴀɪᴋ ʀᴇɢɪsᴛᴇʀ ᴅᴜʟᴜ
+⬡ ᴋᴀʟᴀᴜ ᴛɪᴅᴀᴋ ᴋᴇʟɪʜᴀᴛᴀɴ ʙᴜᴛᴛᴏɴɴʏᴀ, ᴄᴏɴᴛᴏʜɴʏᴀ ᴅɪʙᴀᴡᴀʜ!
+┗━━━━━━━━━━━━━━━━━━㉿
+┏━━〔 ıll CONTOH llı 〕━㉿
+⬡ #daftar namamu.umurmu
+⬡ #daftar @${m.sender.split`@`[0]}.18
+┗━━━━━━━━━━㉿ `
+    unreg: `
+┏━━━〔 ıll ʀᴇsᴛʀɪᴄᴛ llı 〕━━㉿
+⬡ ғɪᴛᴜʀ ɪɴɪ ᴅɪ *ᴅɪsᴀʙʟᴇ* ᴏʟᴇʜ ʀᴇɴғᴜɴɪx!
+┗━━━━━━━━━━━━━━━━━━㉿`
     }[type]
     if (msg) return m.reply(msg)
 }
