@@ -1,6 +1,6 @@
 let handler = async (m, { conn, command }) => {
 let funix = `https://api.xteam.xyz/randomimage/husbu2?APIKEY=MIMINETBOT`
-    conn.sendFile(m.chat, funix, 'Nih', m) 
+    conn.sendFile(m.chat, funix, m) 
 }
 handler.help = ['husbu']
 handler.tags = ['anime']
