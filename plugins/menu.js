@@ -5,13 +5,13 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
 let tags = {
-  'rpgabsen': '––––––『🗡️ - _ʀᴘɢ-ᴀʙsᴇɴ_ 』––––––,
+  'rpgabsen': '––––––『🗡️ - _ʀᴘɢ-ᴀʙsᴇɴ_ 』––––––',
   'rpg': '––––––『 ⚔️ - _ʀᴘɢ_ 』––––––',
   'game': '––––––『 🎮 - _ɢᴀᴍᴇ_ 』––––––',
   'xp': '––––––『 📈 - _ᴇxᴘ, ʟɪᴍɪᴛ_ 』––––––',
   'sticker': '––––––『 🎫 - _sᴛɪᴄᴋᴇʀ_ 』––––––',
   'main': '––––––『 📋- _ᴍᴀɪɴ_ 』––––––',
-  'kerang': '*––––––『 ❔- _ᴋᴇʀᴀɴɢ ᴀᴊᴀɪʙ_ 』––––––',
+  'kerang': '––––––『 ❔- _ᴋᴇʀᴀɴɢ ᴀᴊᴀɪʙ_ 』––––––',
   'quotes': '––––––『 💭 - _ǫᴜᴏᴛᴇs_ 』––––––',
   'admin': '––––––『 👤- _ᴀᴅᴍɪɴ_ 』––––––',
   'group': '––––––『 ⚙️ - _ɢʀᴏᴜᴘ_ 』––––––',
@@ -185,12 +185,12 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    /*conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'github.com/RenFunix', 'Website', '', '', [
+    conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'github.com/RenFunix', 'Website', '', '', [
       ['Donate', '/donasi'],
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
-    ], m)*/
-    let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
+    ], m)
+    /*let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
@@ -224,7 +224,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                         }
                     }
                 }), { userJid: m.chat, quoted: m })
-                conn.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                conn.relayMessage(m.chat, template.message, { messageId: template.key.id })*/
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
