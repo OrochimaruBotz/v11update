@@ -7,7 +7,7 @@ let handler = async(m, { conn }) => {
   conn.sendFile(m.chat, json.url, '', 'Your Waifu', m)
 }
 handler.help = ['waifu']
-handler.tags = ['internet']
+handler.tags = ['anime']
 handler.command = /^(waifu)$/i
 handler.limit = true
 //MADE IN ERPAN 1140 BERKOLABORASI DENGAN BTS
