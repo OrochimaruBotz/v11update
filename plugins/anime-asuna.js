@@ -1,6 +1,6 @@
 let handler = async (m, { conn, command }) => {
 let funix = `https://api-reysekha.herokuapp.com/api/wallpaper/asuna?apikey=APIKEY`
-    conn.sendFile(m.chat, funix, 'Nih', m) 
+    conn.sendFile(m.chat, funix, m) 
 }
 handler.help = ['asuna']
 handler.tags = ['anime']
