@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
    }
     
 handler.help = ['kotori']
-handler.tags = ['internet']
+handler.tags = ['anime']
 handler.command = /^(kotori)$/i
 handler.limit = false
 
