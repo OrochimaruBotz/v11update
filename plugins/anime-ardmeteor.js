@@ -2,7 +2,7 @@ let scrap = require("../lib/scraper_pinterest")
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-	scrap.pinterest("ard meteor","ardmeteor","ard meteor icon","ardmeteor icon").then(a => a[Math.floor(Math.random() * a.length)]).then(b => conn.sendFile(m.chat,b,b,"Done",m))
+	scrap.pinterest("ard meteor").then(a => a[Math.floor(Math.random() * a.length)]).then(b => conn.sendFile(m.chat,b,b,"Done",m))
    }
     
 handler.help = ['ardmeteor']
