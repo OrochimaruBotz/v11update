@@ -1,16 +1,32 @@
-let fetch = require("node-fetch")
+/*import fetch from 'node-fetch'
+let handler = async (m, { conn, command }) => {
+let res = await fetch(`https://api.lolhuman.xyz/api/random/ppcouple?apikey=${lolkey}`)
+if (res.status != 200) throw await res.text()
+let json = await res.json()
+if (!json.status) throw json
+conn.sendButton(m.chat, 'Cewek', wm, json.result.female,[['NEXT', `/${command}`]], m)
+conn.sendButton(m.chat, 'Cowok', wm, json.result.male, [['NEXT', `/${command}`]], m)
+}
+handler.help = ['ppcouple']
+handler.tags = ['internet']
+handler.command = /^(ppcp|ppcouple)$/i
+export default handler*/
 
+
+import fetch from "node-fetch"
 let handler = async (m, { conn }) => {
-  let res = await fetch(global.API('LeysCoder', '/api/ppcouple', {}, 'dappakntlll'))
-  if (!res.ok) throw await res.text()
-  let json = await res.json()
-  if (!json.status) throw json
-  await conn.sendFile(m.chat, json.result.male, '', 'cowo', m)
-  await conn.sendFile(m.chat, json.result.female, '', 'cewe', m)
+
+  let data = await (await fetch('https://raw.githubusercontent.com/KazukoGans/database/main/anime/ppcouple.json')).json()
+  let cita = data[Math.floor(Math.random() * data.length)]
+  
+  let cowi = await(await fetch(cita.cowo)).buffer()
+  await conn.sendFile(m.chat, cowi, '', 'Cowok', m)
+  let ciwi = await(await fetch(cita.cewe)).buffer()
+  await conn.sendFile(m.chat, ciwi, '', 'Cewek', m)
 }
 handler.help = ['ppcouple', 'ppcp']
 handler.tags = ['internet']
 handler.command = /^(pp(cp|couple))$/i
 handler.limit = true
 
-module.exports = handler
+export default handler 
