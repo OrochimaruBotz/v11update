@@ -19,7 +19,7 @@ let [number, pesan] = text.split `|`
 }
 handler.command = /^(pesan)$/i
 handler.rowner = false
-handler.limit = true
+handler.limit = false
 handler.premium = false
 handler.group = false
 handler.private = false

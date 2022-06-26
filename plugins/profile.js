@@ -59,8 +59,8 @@ Level: ${level}
 Role: *${role}*
 Limit: ${limit}
 Money: ${money}
-Registered: ${registered ? 'Yes (' + new Date(regTime) + ')': 'No'}
-Premium: ${premium ? 'Yes' : 'No'}
+Registered: ${registered ? '✅ (' + new Date(regTime) + ')': '❎'}
+Premium: ${premium ? '✅' : '❎'}
 Kadaluarsa Premium: ${(premiumDate - now) > 1 ? msToDate(premiumDate - now) : '*Tidak diatur expired premium!*'}${lastclaim > 0 ? '\nLast Claim: ' + new Date(lastclaim) : ''}
 `.trim()
      let mentionedJid = [who]
@@ -70,7 +70,7 @@ Kadaluarsa Premium: ${(premiumDate - now) > 1 ? msToDate(premiumDate - now) : '*
 handler.help = ['profile [@user]']
 handler.tags = ['info']
 handler.command = /^profile$/i
-handler.limit = true
+handler.limit = false
 handler.register = false
 
 module.exports = handler

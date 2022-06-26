@@ -14,7 +14,7 @@ conn.sendFile(m.chat, gaboleh, '', '', m, true)
 handler.customPrefix = /^(kontol|memek|jembut|jancok|ngentod)$/i
 handler.command = new RegExp
 
-handler.limit = true
+handler.limit = false
 handler.mods = false 
 handler.premium = false
 handler.group = false

@@ -17,6 +17,6 @@ ${puisi.data}
 handler.help = ['puisi']
 handler.tags = ['internet']
 handler.command = /^puisi$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

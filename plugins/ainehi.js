@@ -10,7 +10,7 @@ conn.sendFile(m.chat, helloaine, '', '', m, true)
 handler.customPrefix = /^(hi|hii|hiii|hy|halo|hallo|helo|hello)$/i
 handler.command = new RegExp
 
-handler.limit = true
+handler.limit = false
 handler.mods = false 
 handler.premium = false
 handler.group = false

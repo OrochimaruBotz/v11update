@@ -15,27 +15,27 @@ handler.before = async function (m) {
     await this.sendButton(m.chat, `
 Hai ${ucapan()} *${username.replace(/@.+/, '')}* 👋
 
-${banned ? `kamu *terbanned* kak 😕\nHubungi: wa.me/${owner[0]}` : 'Ada yang bisa saya bantu?'}
-`.trim(), wm, null, [['Menu', '/menu']], m)
+${banned ? `ᴋᴀᴍᴜ ᴛᴇʟᴀʜ *ᴅɪʙᴀɴɴᴇᴅ* 😔\nʜᴜʙᴜɴɢɪ: wa.me/${owner[0]}` : 'ᴀᴅᴀ ʏᴀɴɢ ʙɪsᴀ sᴀʏᴀ ʙᴀɴᴛᴜ?'}
+`.trim(), wm, null, [['ᴍᴇɴᴜ', '/menu']], m)
     user.pc = new Date * 1
 }
 
 module.exports = handler
 function ucapan() {
         const hour_now = moment.tz('Asia/Jakarta').format('HH')
-        var ucapanWaktu = 'Pagi kak'
+        var ucapanWaktu = 'ᴘᴀɢɪ 🏙️'
         if (hour_now >= '03' && hour_now <= '10') {
-          ucapanWaktu = 'Pagi kak'
+          ucapanWaktu = 'ᴘᴀɢɪ 🏙️'
         } else if (hour_now >= '10' && hour_now <= '15') {
-          ucapanWaktu = 'Siang kak'
+          ucapanWaktu = 'sɪᴀɴɢ 🌆
         } else if (hour_now >= '15' && hour_now <= '17') {
-          ucapanWaktu = 'Sore kak'
+          ucapanWaktu = 'sᴏʀᴇ 🌇'
         } else if (hour_now >= '17' && hour_now <= '18') {
-          ucapanWaktu = 'Selamat Petang kak'
+          ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ ᴘᴇᴛᴀɴɢ 🌇'
         } else if (hour_now >= '18' && hour_now <= '23') {
-          ucapanWaktu = 'Malam kak'
+          ucapanWaktu = 'ᴍᴀʟᴀᴍ 🌃'
         } else {
-          ucapanWaktu = 'Selamat Malam!'
+          ucapanWaktu = 'sᴇʟᴀᴍᴀᴛ ᴍᴀʟᴀᴍ 🌃'
         }	
         return ucapanWaktu
 }

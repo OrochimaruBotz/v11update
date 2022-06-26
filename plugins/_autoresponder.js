@@ -125,5 +125,5 @@ let hiaine = hiain[Math.floor(Math.random() * hiain.length)]
 
 }
 
-handler.limit = true
+handler.limit = false
 module.exports = handler

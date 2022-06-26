@@ -17,6 +17,6 @@ function handler(m, { text }) {
 handler.help = ['alay']
 handler.tags = ['fun']
 handler.command = ['alay']
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

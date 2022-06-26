@@ -7,7 +7,7 @@ conn.sendFile(m.chat, tes, '', '', m, true)
 handler.customPrefix = /^(aine)$/i
 handler.command = new RegExp
 
-handler.limit = true
+handler.limit = false
 handler.mods = false 
 handler.premium = false
 handler.group = false 

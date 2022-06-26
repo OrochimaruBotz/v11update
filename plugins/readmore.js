@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['readmore'].map(v => v + ' <teks>|<teks>')
 handler.tags = ['tools']
 handler.command = /^((read)?more|rm|selengkapnya)$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 

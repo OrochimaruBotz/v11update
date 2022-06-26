@@ -17,7 +17,7 @@ handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
-handler.limit = true
+handler.limit = false
 handler.private = false
 
 handler.admin = false

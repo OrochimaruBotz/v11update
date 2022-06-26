@@ -17,6 +17,6 @@ ${cerpen.data}
 handler.help = ['cerpen']
 handler.tags = ['internet']
 handler.command = /^cerpen$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

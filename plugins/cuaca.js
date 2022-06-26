@@ -40,6 +40,6 @@ console.log(e)
 handler.help = ['infocuaca <city>']
 handler.tags = ['info']
 handler.command = /^infocuaca|weather$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

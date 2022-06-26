@@ -28,6 +28,6 @@ m.reply(reo)
 handler.help = ['carigrup <pencarian>']
 handler.tags = ['tools']
 handler.command = /^carigrup/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

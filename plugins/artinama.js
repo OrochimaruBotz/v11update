@@ -77,6 +77,6 @@ Nama ${nama} ${h}
 handler.help = ['artinama'].map(v => v + ' [name]')
 handler.tags = ['fun']
 handler.command = ['artinama']
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

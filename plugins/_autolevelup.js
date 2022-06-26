@@ -29,9 +29,9 @@ module.exports = {
 		while (levelling.canLevelUp(user.level, user.exp, global.multiplier)) user.level++
 
 		if (before !== user.level) {
-			let chating = `Congratulations, you have leveled up!
+			let chating = `sᴇʟᴀᴍᴀᴛ, ᴋᴀᴍᴜ ɴᴀɪᴋ ʟᴇᴠᴇʟ!
 *${before}* -> *${user.level}*
-Use *.profile* to check`.trim()
+ɢᴜɴᴀᴋᴀɴ *.ᴘʀᴏғɪʟᴇ* ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇᴄᴇᴋ`.trim()
 			m.reply(chating)
 			console.log(color(chating, 'pink'))
 		}

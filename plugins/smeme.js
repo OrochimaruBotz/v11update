@@ -22,7 +22,7 @@ handler.help = ['smeme']
 handler.tags = ['sticker']
 handler.command = /^smeme$/i
 
-handler.limit = true
+handler.limit = false
 
 handler.fail = null
 

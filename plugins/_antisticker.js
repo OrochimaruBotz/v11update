@@ -15,7 +15,7 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
       if (global.opts) {
         if (isAdmin || !isBotAdmin){		  
         }else{
-          m.reply('*Sticker terdeteksi*\nKamu akan segera dikick!') // ganti text terserah kamu 
+          m.reply('*sᴛɪᴋᴇʀ ᴛᴇʀᴅᴇᴛᴇᴋsɪ!*\nᴋᴀᴍᴜ ᴀᴋᴀɴ sᴇɢᴇʀᴀ ᴅɪᴋɪᴄᴋ!') // ganti text terserah kamu 
           this.groupParticipantsUpdate(m.chat, [m.sender], "remove")
         }return true
       }

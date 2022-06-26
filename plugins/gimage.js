@@ -8,7 +8,7 @@ let handler  = async (m, { conn, args, text }) => {
   let { url, width, height } = pickRandom(results) || {}
   if (!url) throw '404 Not Found'
   conn.sendFile(m.chat, url, 'gimage', `
-*── 「 GOOGLE IMAGE 」 ──*
+*── 「  IMAGE RESULT 」 ──*
 
 ${text}
 ➸ *width*: ${width}
@@ -18,7 +18,7 @@ ${text}
 handler.help = ['gimage <search>']
 handler.tags = ['internet']
 handler.command = /^(gimage|image)$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 

@@ -6,8 +6,8 @@ const {
 const fetch = require('node-fetch')
 
 let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
-	if (!text) throw `_Masukan nomor!_\nContoh:\n\n${usedPrefix + command} ${global.owner[0]}`
-	m.reply('_Sedang di proses..._')
+	if (!text) throw `_ᴍᴀsᴜᴋᴋᴀɴ ɴᴏᴍᴏʀ!_\nContoh:\n\n${usedPrefix + command} ${global.owner[0]}`
+	m.reply('_sᴇᴅᴀɴɢ ᴅɪ ᴘʀᴏsᴇs..._')
     let _participants = participants.map(user => user.id)
     let users = (await Promise.all(
         text.split(',')
@@ -37,7 +37,7 @@ let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
     const add = getBinaryNodeChild(response, 'add')
     const participant = getBinaryNodeChildren(response, 'add')
     let anu = participant[0].content.filter(v => v)
-    if (anu[0].attrs.error == 408) conn.sendButton(m.chat, `Tidak dapat menambahkan @${anu[0].attrs.jid.split('@')[0]}!\nKabarnya si @${anu[0].attrs.jid.split('@')[0]} baru keluar dari grup ini :v`, wm, null, [['Link Groul', '/link']], m)
+    if (anu[0].attrs.error == 408) conn.sendButton(m.chat, `ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ @${anu[0].attrs.jid.split('@')[0]}!\nᴋᴀʀᴇɴᴀ @${anu[0].attrs.jid.split('@')[0]} ʙᴀʀᴜ ʙᴀʀᴜ ɪɴɪ ᴋᴇʟᴜᴀʀ ᴅᴀʀɪ ɢʀᴜᴘ`, wm, null, [['ʟɪɴᴋ ɢʀᴏᴜᴘ', '/link']], m)
     for (const user of participant[0].content.filter(item => item.attrs.error == 403)) {
     	const jid = user.attrs.jid
     	const content = getBinaryNodeChild(user, 'add_request')

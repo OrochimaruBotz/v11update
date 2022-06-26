@@ -31,6 +31,6 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['kbbi <kata>']
 handler.tags = ['internet']
 handler.command = /^(kbbi)$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

@@ -7,7 +7,7 @@ conn.sendFile(m.chat, helloaine, '', '', m, true)
 handler.customPrefix = /^(kawai|kawaii)$/i
 handler.command = new RegExp
 
-handler.limit = true
+handler.limit = false
 handler.mods = false 
 handler.premium = false
 handler.group = true

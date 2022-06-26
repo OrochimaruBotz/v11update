@@ -1,6 +1,6 @@
 let handler = async (m, { conn, isAdmin }) => {
-  if (m.fromMe) throw 'Jadi kan bot sebagai admin'
-  if (isAdmin) throw 'Padahal udah jadi admin'
+  if (m.fromMe) throw 'ᴊᴀᴅɪᴋᴀɴ ʙᴏᴛ sᴇʙᴀɢᴀɪ ᴀᴅᴍɪɴ!'
+  if (isAdmin) throw 'ᴅɪᴀ ᴜᴅᴀʜ ᴀᴅᴍɪɴ'
   await conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote')
 }
 handler.command = /^admin!$/i

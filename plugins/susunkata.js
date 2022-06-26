@@ -33,7 +33,7 @@ TiketCoin: ${tiketcoin} Tiketcoin
 handler.help = ['susunkata']
 handler.tags = ['game']
 handler.command = /^susunkata/i
-handler.limit = true
+handler.limit = false
 handler.group = true
 
 module.exports = handler

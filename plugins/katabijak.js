@@ -38,6 +38,6 @@ Opsi Tersedia:
 handler.help = ['kata'].map(v => v + ' <opsi>')
 handler.tags = ['quotes']
 handler.command = /^(kata|jagokata)$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler

@@ -8,7 +8,7 @@ await conn.sendMessage(m.chat, { audio: { url: "./mp3/WhatsApp-Audio-2021-02-19-
 handler.customPrefix = /^(soundbakahentai)$/i
 handler.command = new RegExp
 
-handler.limit = true
+handler.limit = false
 handler.mods = false 
 handler.premium = false
 handler.group = false 

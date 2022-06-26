@@ -12,6 +12,6 @@ key: {
 handler.help = ['reaction <reply>']
 handler.tags = ['fun']
 handler.command = /^rea(c?t?i?o?n?)?$/i
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
