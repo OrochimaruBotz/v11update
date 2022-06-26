@@ -228,7 +228,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
-handler.register = true
 
 handler.exp = 3
 
