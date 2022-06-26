@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command }) => {
-let funix = `https://api-reysekha.herokuapp.com/api/random/cosplay?apikey=APIKEY`
+let funix = `https://api.zacros.my.id/randomimg/cosplay`
     conn.sendFile(m.chat, funix, 'done', 'Done', m) 
 }
 handler.help = ['cosplay']
