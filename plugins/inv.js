@@ -94,128 +94,137 @@ let handler = async (m, { conn, usedPrefix }) => {
     let usersmythic = sortedmythic.map(v => v[0])
     let userslegendary = sortedlegendary.map(v => v[0])
     let str = `
-Inventory *${await conn.getName(name)}*
+❏ ɪ ɴ ᴠ ᴇ ɴ ᴛ ᴏ ʀ ʏ 
+ > *${await conn.getName(name)}*
 
-Health: *${health}*
-Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*
-Money: *${money}*
-Limit: *${limit}*
-Level: *${level}*
-Exp: *${exp}*
-Atm: *${bank}*
-Cupon: *${cupon}*
-Expg: *${expg}*
-Tiketm: *${tiketm}*
-Tiketcoin: *${tiketcoin}*
+❏ ʜᴇᴀʟᴛʜ : *${health}*
+❏ ᴀʀᴍᴏʀ : *${armor == 0 ? '❌' : '' || armor == 1 ? 'ʟᴇᴀᴛʜᴇʀ ᴀʀᴍᴏʀ' : '' || armor == 2 ? 'ɪʀᴏɴ ᴀʀᴍᴏʀ' : '' || armor == 3 ? 'ɢᴏʟᴅ ᴀʀᴍᴏʀ' : '' || armor == 4 ? 'ᴅɪᴀᴍᴏɴᴅ ᴀʀᴍᴏʀ' : '' || armor == 5 ? 'ɴᴇᴛʜᴇʀɪᴛᴇ Armor' : ''}*
+❏ ᴍᴏɴᴇʏ : *${money}*
+❏ ʟɪᴍɪᴛ : *${limit}*
+❏ ʟᴇᴠᴇʟ : *${level}*
+❏ ᴇxᴘ : *${exp}*
+❏ ᴀᴛᴍ : *${bank}*
+❏ ᴄᴜᴘᴏɴ : *${cupon}*
+❏ ᴇxᴘɢ : *${expg}*
+❏ ᴛɪᴋᴇᴛᴍ : *${tiketm}*
+❏ ᴛɪᴋᴇᴛᴄᴏɪɴ : *${tiketcoin}*
 
-*Inventory*
-Potion: *${potion}*
-Ramuan: *${ramuan}*
-Iron: *${iron}*
-String: *${string}*
-Sword: *${sword}*
-Sampah: *${sampah}*
-Kayu: *${kayu}*
-Batu: *${batu}*
-Aqua: *${aqua}*
-Makanan Pet: *${makananpet}*
-Makanan Phonix: *${makananphonix}*
-Makanan Naga: *${makanannaga}*
-Makanan Griffin: *${makanangriffin}*
-Makanan Kyubi: *${makanankyubi}*
-Makanan Centaur: *${makanancentaur}*
-Total inv: *${diamond + potion + ramuan + sampah + kayu + sword + iron + string + makananpet + makananphonix + makanannaga + makanangriffin + makanankyubi + makanancentaur}* item
+╭──〔 I N V E N T O R Y 〕─⬣
+┃
+┃➵͜͡✪ ᴘᴏᴛɪᴏɴ : *${potion}*
+┃➵͜͡✪ ʀᴀᴍᴜᴀɴ : *${ramuan}*
+┃➵͜͡✪ ɪʀᴏɴ : *${iron}*
+┃➵͜͡✪ sᴛʀɪɴɢ : *${string}*
+┃➵͜͡✪ sᴡᴏʀᴅ :  *${sword}*
+┃➵͜͡✪ sᴀᴍᴘᴀʜ : *${sampah}*
+┃➵͜͡✪ ᴋᴀʏᴜ : *${kayu}*
+┃➵͜͡✪ ʙᴀᴛᴜ : *${batu}*
+┃➵͜͡✪ ᴀǫᴜᴀ : *${aqua}*
+┃➵͜͡✪ ᴍᴀᴋᴀɴᴀɴ ᴘᴇᴛ : *${makananpet}*
+┃➵͜͡✪ ᴍᴀᴋᴀɴᴀɴ ᴘʜᴏɴɪx : *${makananphonix}*
+┃➵͜͡✪ ᴍᴀᴋᴀɴᴀɴ ɴᴀɢᴀ :  *${makanannaga}*
+┃➵͜͡✪ ᴍᴀᴋᴀɴᴀɴ ɢʀɪғғɪɴ : *${makanangriffin}*
+┃➵͜͡✪ ᴍᴀᴋᴀɴᴀɴ ᴋʏᴜʙɪ : *${makanankyubi}*
+┃➵͜͡✪ ᴍᴀᴋᴀɴᴀɴ ᴄᴇɴᴛᴀᴜʀ : *${makanancentaur}*
+┃➵͜͡✪ ᴛᴏᴛᴀʟ ɪɴᴠ : *${diamond + potion + ramuan + sampah + kayu + sword + iron + string + makananpet + makananphonix + makanannaga + makanangriffin + makanankyubi + makanancentaur}* ɪᴛᴇᴍ
+┃
+┃──〔 C R A T E 〕─⬣
+┃
+┃➵͜͡✪ ʙᴏxs : *${boxs}*
+┃➵͜͡✪ ᴄᴏᴍᴍᴏɴ : *${common}*
+┃➵͜͡✪ ᴜɴᴄᴏᴍᴍᴏɴ : *${uncommon}*
+┃➵͜͡✪ ᴍʏᴛʜɪᴄ : *${mythic}*
+┃➵͜͡✪ ʟᴇɢᴇɴᴅᴀʀʏ :  *${legendary}*
+┃➵͜͡✪ ᴘᴇᴛ : *${pet}*
+┃➵͜͡✪ ɢᴀʀᴅᴇɴʙᴏxs : *${gardenboxs}*
+┃
+┃──〔 F R U I T 〕─⬣
+┃
+┃➵͜͡✪ ᴍᴀɴɢɢᴀ : ${mangga}
+┃➵͜͡✪ ᴀɴɢɢᴜʀ : ${anggur}
+┃➵͜͡✪ ᴘɪsᴀɴɢ : ${pisang}
+┃➵͜͡✪ ᴊᴇʀᴜᴋ : ${jeruk}
+┃➵͜͡✪ ᴀᴘᴇʟ : ${apel}
+┃
+┃──〔 S E E D 〕─⬣
+┃
+┃➵͜͡✪ ʙɪʙɪᴛ ᴍᴀɴɢɢᴀ : ${bibitmangga}
+┃➵͜͡✪ ʙɪʙɪᴛ ᴀɴɢɢᴜʀ : ${bibitanggur}
+┃➵͜͡✪ ʙɪʙɪᴛ ᴘɪsᴀɴɢ : ${bibitpisang}
+┃➵͜͡✪ ʙɪʙɪᴛ ᴊᴇʀᴜᴋ : ${bibitjeruk}
+┃➵͜͡✪ ʙɪʙɪᴛ ᴀᴘᴇʟ : ${bibitapel}
+┃
+┃──〔 T R A S H 〕─⬣
+┃
+┃➵͜͡✪ ᴋᴀʀᴅᴜs : ${kardus}
+┃➵͜͡✪ ᴋᴀʟᴇɴɢ : ${kaleng}
+┃➵͜͡✪ ʙᴏᴛᴏʟ : ${botol}
+┃
+┃──〔 M I N I N G 〕─⬣
+┃
+┃➵͜͡✪ ʙᴇʀʟɪᴀɴ : ${berlian}
+┃➵͜͡✪ ᴇᴍᴀs : ${emas}
+┃➵͜͡✪ ᴅɪᴀᴍᴏɴᴅ : ${diamond}
+┃
+╰─────────────⬣
 
-*Crate*
-Boxs: *${boxs}*
-Common: *${common}*
-Uncommon: *${uncommon}*
-Mythic: *${mythic}*
-Legendary: *${legendary}*.
-Pet: *${pet}*
-Gardenboxs: *${gardenboxs}*
+⬣──〔 ʜ ᴇ ʀ ᴏ 〕──⬣
+ᴍʏ ʜᴇʀᴏ: *${hero == 0 ? '❌' : '' || hero == 1 ? 'Level 1' : '' || hero == 2 ? 'Level 2' : '' || hero == 3 ? 'Level 3' : '' || hero == 4 ? 'Level 4' : '' || hero == 5 ? 'Level 5' : '' || hero == 6 ? 'Level 6' : '' || hero == 7 ? 'Level 7' : '' || hero == 8 ? 'Level 8' : '' || hero == 9 ? 'Level 9' : '' || hero == 10 ? 'Level 10' : '' || hero == 11 ? 'Level 11' : '' || hero == 12 ? 'Level 12' : '' || hero == 13 ? 'Level 13' : '' || hero == 14 ? 'Level 14' : '' || hero == 15 ? 'Level 15' : '' || hero == 16 ? 'Level 16' : '' || hero == 17 ? 'Level 17' : '' || hero == 18 ? 'Level 18' : '' || hero == 19 ? 'Level 19' : '' || hero == 20 ? 'Level 20' : '' || hero == 21 ? 'Level 21' : '' || hero == 22 ? 'Level 22' : '' || hero == 23 ? 'Level 23' : '' || hero == 24 ? 'Level 24' : '' || hero == 25 ? 'Level 25' : '' || hero == 26 ? 'Level 26' : '' || hero == 27 ? 'Level 27' : '' || hero == 28 ? 'Level 28' : '' || hero == 29 ? 'Level 29' : '' || hero == 30 ? 'Level 30' : '' || hero == 31 ? 'Level 31' : '' || hero == 32 ? 'Level 32' : '' || hero == 33 ? 'Level 33' : '' || hero == 34 ? 'Level 34' : '' || hero == 35 ? 'Level 35' : '' || hero == 36 ? 'Level 36' : '' || hero == 37 ? 'Level 37'  : '' || hero == 38 ? 'Level 38' : '' || hero == 39 ? 'Level 39' : '' || hero == 40 ? 'Level MAX' : ''}*
 
-*Fruits*
-Mangga: ${mangga}
-Anggur: ${anggur}
-Pisang: ${pisang}
-Jeruk: ${jeruk}
-Apel: ${apel}
-
-*Seeds*
-Bibit Mangga: ${bibitmangga}
-Bibit Anggur: ${bibitanggur}
-Bibit Pisang: ${bibitpisang}
-Bibit Jeruk: ${bibitjeruk}
-Bibit Apel: ${bibitapel}
-
-*Trash Man*
-Kardus: ${kardus}
-Kaleng: ${kaleng}
-Botol: ${botol}
-
-*Mining*
-Berlian: ${berlian}
-Emas: ${emas}
-Diamond: ${diamond}
-
-*Hero*
-My Hero: *${hero == 0 ? 'Tidak Punya' : '' || hero == 1 ? 'Level 1' : '' || hero == 2 ? 'Level 2' : '' || hero == 3 ? 'Level 3' : '' || hero == 4 ? 'Level 4' : '' || hero == 5 ? 'Level 5' : '' || hero == 6 ? 'Level 6' : '' || hero == 7 ? 'Level 7' : '' || hero == 8 ? 'Level 8' : '' || hero == 9 ? 'Level 9' : '' || hero == 10 ? 'Level 10' : '' || hero == 11 ? 'Level 11' : '' || hero == 12 ? 'Level 12' : '' || hero == 13 ? 'Level 13' : '' || hero == 14 ? 'Level 14' : '' || hero == 15 ? 'Level 15' : '' || hero == 16 ? 'Level 16' : '' || hero == 17 ? 'Level 17' : '' || hero == 18 ? 'Level 18' : '' || hero == 19 ? 'Level 19' : '' || hero == 20 ? 'Level 20' : '' || hero == 21 ? 'Level 21' : '' || hero == 22 ? 'Level 22' : '' || hero == 23 ? 'Level 23' : '' || hero == 24 ? 'Level 24' : '' || hero == 25 ? 'Level 25' : '' || hero == 26 ? 'Level 26' : '' || hero == 27 ? 'Level 27' : '' || hero == 28 ? 'Level 28' : '' || hero == 29 ? 'Level 29' : '' || hero == 30 ? 'Level 30' : '' || hero == 31 ? 'Level 31' : '' || hero == 32 ? 'Level 32' : '' || hero == 33 ? 'Level 33' : '' || hero == 34 ? 'Level 34' : '' || hero == 35 ? 'Level 35' : '' || hero == 36 ? 'Level 36' : '' || hero == 37 ? 'Level 37'  : '' || hero == 38 ? 'Level 38' : '' || hero == 39 ? 'Level 39' : '' || hero == 40 ? 'Level MAX' : ''}*
-
-*Pet*
-Kucing: *${kucing == 0 ? 'Tidak Punya' : '' || kucing == 1 ? 'Level 1' : '' || kucing == 2 ? 'Level 2' : '' || kucing == 3 ? 'Level 3' : '' || kucing == 4 ? 'Level 4' : '' || kucing == 5 ? 'Level MAX' : ''}*
-Kuda: *${kuda == 0 ? 'Tidak Punya' : '' || kuda == 1 ? 'Level 1' : '' || kuda == 2 ? 'Level 2' : '' || kuda == 3 ? 'Level 3' : '' || kuda == 4 ? 'Level 4' : '' || kuda == 5 ? 'Level MAX' : ''}*
-Naga: *${naga == 0 ? 'Tidak Punya' : '' || naga == 1 ? 'Level 1' : '' || naga == 2 ? 'Level 2' : '' || naga == 3 ? 'Level 3' : '' || naga == 4 ? 'Level 4' : '' || naga == 5 ? 'Level 5' : '' || naga == 6 ? 'Level 6' : '' || naga == 7 ? 'Level 7' : '' || naga == 8 ? 'Level 8' : '' || naga == 9 ? 'Level 9' : '' || naga == 10 ? 'Level 10' : '' || naga == 11 ? 'Level 11' : '' || naga == 12 ? 'Level 12' : '' || naga == 13 ? 'Level 13' : '' || naga == 14 ? 'Level 14' : '' || naga == 15 ? 'Level 15' : '' || naga == 16 ? 'Level 16' : '' || naga == 17 ? 'Level 17' : '' || naga == 18 ? 'Level 18' : '' || naga == 19 ? 'Level 19' : '' || naga == 20 ? 'Level MAX' : ''}*
-Kyubi: *${kyubi == 0 ? 'Tidak Punya' : '' || kyubi == 1 ? 'Level 1' : '' || kyubi == 2 ? 'Level 2' : '' || kyubi == 3 ? 'Level 3' : '' || kyubi == 4 ? 'Level 4' : '' || kyubi == 5 ? 'Level 5' : '' || kyubi == 6 ? 'Level 6' : '' || kyubi == 7 ? 'Level 7' : '' || kyubi == 8 ? 'Level 8' : '' || kyubi == 9 ? 'Level 9' : '' || kyubi == 10 ? 'Level 10' : '' || kyubi == 11 ? 'Level 11' : '' || kyubi == 12 ? 'Level 12' : '' || kyubi == 13 ? 'Level 13' : '' || kyubi == 14 ? 'Level 14' : '' || kyubi == 15 ? 'Level 15' : '' || kyubi == 16 ? 'Level 16' : '' || kyubi == 17 ? 'Level 17' : '' || kyubi == 18 ? 'Level 18' : '' || kyubi == 19 ? 'Level 19' : '' || kyubi == 20 ? 'Level MAX' : ''}*
-Centaur: *${centaur == 0 ? 'Tidak Punya' : '' || centaur == 1 ? 'Level 1' : '' || centaur == 2 ? 'Level 2' : '' || centaur == 3 ? 'Level 3' : '' || centaur == 4 ? 'Level 4' : '' || centaur == 5 ? 'Level 5' : '' || centaur == 6 ? 'Level 6' : '' || centaur == 7 ? 'Level 7' : '' || centaur == 8 ? 'Level 8' : '' || centaur == 9 ? 'Level 9' : '' || centaur == 10 ? 'Level 10' : '' || centaur == 11 ? 'Level 11' : '' || centaur == 12 ? 'Level 12' : '' || centaur == 13 ? 'Level 13' : '' || centaur == 14 ? 'Level 14' : '' || centaur == 15 ? 'Level 15' : '' || centaur == 16 ? 'Level 16' : '' || centaur == 17 ? 'Level 17' : '' || centaur == 18 ? 'Level 18' : '' || centaur == 19 ? 'Level 19' : '' || centaur == 20 ? 'Level MAX' : ''}*
-Rubah: *${rubah == 0 ? 'Tidak Punya' : '' || rubah == 1 ? 'Level 1' : '' || rubah == 2 ? 'Level 2' : '' || rubah == 3 ? 'Level 3' : '' || rubah == 4 ? 'Level 4' : '' || rubah == 5 ? 'Level MAX' : ''}*  
-Phonix: *${phonix == 0 ? 'Tidak Punya' : '' || phonix == 1 ? 'Level 1' : '' || phonix == 2 ? 'Level 2' : '' || phonix == 3 ? 'Level 3' : '' || phonix == 4 ? 'Level 4' : '' || phonix == 5 ? 'Level 5' : '' || phonix == 6 ? 'Level 6' : '' || phonix == 7 ? 'Level 7' : '' || phonix == 8 ? 'Level 8' : '' || phonix == 9 ? 'Level 9' : '' || phonix == 10 ? 'Level 10' : '' || phonix == 11 ? 'Level 11' : '' || phonix == 12 ? 'Level 12' : '' || phonix == 13 ? 'Level 13' : '' || phonix == 14 ? 'Level 14' : '' || phonix == 15 ? 'Level MAX' : ''}*
-Griffin: *${griffin == 0 ? 'Tidak Punya' : '' || griffin == 1 ? 'Level 1' : '' || griffin == 2 ? 'Level 2' : '' || griffin == 3 ? 'Level 3' : '' || griffin == 4 ? 'Level 4' : '' || griffin == 5 ? 'Level 5' : '' || griffin == 6 ? 'Level 6' : '' || griffin == 7 ? 'Level 7' : '' || griffin == 8 ? 'Level 8' : '' || griffin == 9 ? 'Level 9' : '' || griffin == 10 ? 'Level 10' : '' || griffin == 11 ? 'Level 11' : '' || griffin == 12 ? 'Level 12' : '' || griffin == 13 ? 'Level 13' : '' || griffin == 14 ? 'Level 14' : '' || griffin == 15 ? 'Level MAX' : ''}*
-Serigala: *${serigala == 0 ? 'Tidak Punya' : '' || serigala == 1 ? 'Level 1' : '' || serigala == 2 ? 'Level 2' : '' || serigala == 3 ? 'Level 3' : '' || serigala == 4 ? 'Level 4' : '' || serigala == 5 ? 'Level 5' : '' || serigala == 6 ? 'Level 6' : '' || serigala == 7 ? 'Level 7' : '' || serigala == 8 ? 'Level 8' : '' || serigala == 9 ? 'Level 9' : '' || serigala == 10 ? 'Level 10' : '' || serigala == 11 ? 'Level 11' : '' || serigala == 12 ? 'Level 12' : '' || serigala == 13 ? 'Level 13' : '' || serigala == 14 ? 'Level 14' : '' || serigala == 15 ? 'Level MAX' : ''}*\n
-*Proges*
+⬣──〔 ᴘ ᴇ ᴛ 〕──⬣
+❏ ᴋᴜᴄɪɴɢ : *${kucing == 0 ? '❌' : '' || kucing == 1 ? 'Level 1' : '' || kucing == 2 ? 'Level 2' : '' || kucing == 3 ? 'Level 3' : '' || kucing == 4 ? 'Level 4' : '' || kucing == 5 ? 'Level MAX' : ''}*
+❏ ᴋᴜᴅᴀ : *${kuda == 0 ? 'Tidak Punya' : '' || kuda == 1 ? 'Level 1' : '' || kuda == 2 ? 'Level 2' : '' || kuda == 3 ? 'Level 3' : '' || kuda == 4 ? 'Level 4' : '' || kuda == 5 ? 'Level MAX' : ''}*
+❏ ɴᴀɢᴀ : *${naga == 0 ? '❌' : '' || naga == 1 ? 'Level 1' : '' || naga == 2 ? 'Level 2' : '' || naga == 3 ? 'Level 3' : '' || naga == 4 ? 'Level 4' : '' || naga == 5 ? 'Level 5' : '' || naga == 6 ? 'Level 6' : '' || naga == 7 ? 'Level 7' : '' || naga == 8 ? 'Level 8' : '' || naga == 9 ? 'Level 9' : '' || naga == 10 ? 'Level 10' : '' || naga == 11 ? 'Level 11' : '' || naga == 12 ? 'Level 12' : '' || naga == 13 ? 'Level 13' : '' || naga == 14 ? 'Level 14' : '' || naga == 15 ? 'Level 15' : '' || naga == 16 ? 'Level 16' : '' || naga == 17 ? 'Level 17' : '' || naga == 18 ? 'Level 18' : '' || naga == 19 ? 'Level 19' : '' || naga == 20 ? 'Level MAX' : ''}*
+❏ ᴋʏᴜʙɪ : *${kyubi == 0 ? '❌' : '' || kyubi == 1 ? 'Level 1' : '' || kyubi == 2 ? 'Level 2' : '' || kyubi == 3 ? 'Level 3' : '' || kyubi == 4 ? 'Level 4' : '' || kyubi == 5 ? 'Level 5' : '' || kyubi == 6 ? 'Level 6' : '' || kyubi == 7 ? 'Level 7' : '' || kyubi == 8 ? 'Level 8' : '' || kyubi == 9 ? 'Level 9' : '' || kyubi == 10 ? 'Level 10' : '' || kyubi == 11 ? 'Level 11' : '' || kyubi == 12 ? 'Level 12' : '' || kyubi == 13 ? 'Level 13' : '' || kyubi == 14 ? 'Level 14' : '' || kyubi == 15 ? 'Level 15' : '' || kyubi == 16 ? 'Level 16' : '' || kyubi == 17 ? 'Level 17' : '' || kyubi == 18 ? 'Level 18' : '' || kyubi == 19 ? 'Level 19' : '' || kyubi == 20 ? 'Level MAX' : ''}*
+❏ ᴄᴇɴᴛᴀᴜʀ : *${centaur == 0 ? '❌' : '' || centaur == 1 ? 'Level 1' : '' || centaur == 2 ? 'Level 2' : '' || centaur == 3 ? 'Level 3' : '' || centaur == 4 ? 'Level 4' : '' || centaur == 5 ? 'Level 5' : '' || centaur == 6 ? 'Level 6' : '' || centaur == 7 ? 'Level 7' : '' || centaur == 8 ? 'Level 8' : '' || centaur == 9 ? 'Level 9' : '' || centaur == 10 ? 'Level 10' : '' || centaur == 11 ? 'Level 11' : '' || centaur == 12 ? 'Level 12' : '' || centaur == 13 ? 'Level 13' : '' || centaur == 14 ? 'Level 14' : '' || centaur == 15 ? 'Level 15' : '' || centaur == 16 ? 'Level 16' : '' || centaur == 17 ? 'Level 17' : '' || centaur == 18 ? 'Level 18' : '' || centaur == 19 ? 'Level 19' : '' || centaur == 20 ? 'Level MAX' : ''}*
+❏ ʀᴜʙᴀʜ : *${rubah == 0 ? '❌' : '' || rubah == 1 ? 'Level 1' : '' || rubah == 2 ? 'Level 2' : '' || rubah == 3 ? 'Level 3' : '' || rubah == 4 ? 'Level 4' : '' || rubah == 5 ? 'Level MAX' : ''}*  
+❏ ᴘʜᴏɴɪx : *${phonix == 0 ? '❌' : '' || phonix == 1 ? 'Level 1' : '' || phonix == 2 ? 'Level 2' : '' || phonix == 3 ? 'Level 3' : '' || phonix == 4 ? 'Level 4' : '' || phonix == 5 ? 'Level 5' : '' || phonix == 6 ? 'Level 6' : '' || phonix == 7 ? 'Level 7' : '' || phonix == 8 ? 'Level 8' : '' || phonix == 9 ? 'Level 9' : '' || phonix == 10 ? 'Level 10' : '' || phonix == 11 ? 'Level 11' : '' || phonix == 12 ? 'Level 12' : '' || phonix == 13 ? 'Level 13' : '' || phonix == 14 ? 'Level 14' : '' || phonix == 15 ? 'Level MAX' : ''}*
+❏ ɢʀɪғғɪɴ : *${griffin == 0 ? '❌' : '' || griffin == 1 ? 'Level 1' : '' || griffin == 2 ? 'Level 2' : '' || griffin == 3 ? 'Level 3' : '' || griffin == 4 ? 'Level 4' : '' || griffin == 5 ? 'Level 5' : '' || griffin == 6 ? 'Level 6' : '' || griffin == 7 ? 'Level 7' : '' || griffin == 8 ? 'Level 8' : '' || griffin == 9 ? 'Level 9' : '' || griffin == 10 ? 'Level 10' : '' || griffin == 11 ? 'Level 11' : '' || griffin == 12 ? 'Level 12' : '' || griffin == 13 ? 'Level 13' : '' || griffin == 14 ? 'Level 14' : '' || griffin == 15 ? 'Level MAX' : ''}*
+❏ sᴇʀɪɢᴀʟᴀ : *${serigala == 0 ? '❌' : '' || serigala == 1 ? 'Level 1' : '' || serigala == 2 ? 'Level 2' : '' || serigala == 3 ? 'Level 3' : '' || serigala == 4 ? 'Level 4' : '' || serigala == 5 ? 'Level 5' : '' || serigala == 6 ? 'Level 6' : '' || serigala == 7 ? 'Level 7' : '' || serigala == 8 ? 'Level 8' : '' || serigala == 9 ? 'Level 9' : '' || serigala == 10 ? 'Level 10' : '' || serigala == 11 ? 'Level 11' : '' || serigala == 12 ? 'Level 12' : '' || serigala == 13 ? 'Level 13' : '' || serigala == 14 ? 'Level 14' : '' || serigala == 15 ? 'Level MAX' : ''}*\n
+⬣──〔 ᴘ ʀ ᴏ ɢ ʀ ᴇ s s 〕──⬣
 ╭────────────────
-│Level *${level}* To Level *${level}*
-│Exp *${exp}* -> *${max}*
+│❏ ʟᴇᴠᴇʟ *${level}* ᴛᴏ ʟᴇᴠᴇʟ *${level}*
+│❏ ᴇxᴘ *${exp}* -> *${max}*
 │
-│Hero ${hero == 0 ? 'Tidak Punya' : '' || hero > 0 && hero < 40 ? `Level *${hero}* To level *${hero + 1}*\n│Exp *${exphero}* -> *${hero *500}*` : '' || hero == 40 ? '*Max Level*' : ''}
+│❏ ʜᴇʀᴏ : ${hero == 0 ? '❌' : '' || hero > 0 && hero < 40 ? `ʟᴇᴠᴇʟ *${hero}* ᴛᴏ ʟᴇᴠᴇʟ *${hero + 1}*\n│ᴇxᴘ : *${exphero}* -> *${hero *500}*` : '' || hero == 40 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Rubah ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n│Exp *${_rubah}* -> *${rubah *1000}*` : '' || rubah == 5 ? '*Max Level*' : ''}
+│❏ ʀᴜʙᴀʜ : ${rubah == 0 ? '❌' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n│ᴇxᴘ : *${_rubah}* -> *${rubah *1000}*` : '' || rubah == 5 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Kucing ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n│Exp *${_kucing}* -> *${kucing *1000}*` : '' || kucing == 5 ? '*Max Level*' : ''}
+│❏ ᴋᴜᴄɪɴɢ : ${kucing == 0 ? '❌' : '' || kucing > 0 && kucing < 5 ? `ʟᴇᴠᴇʟ *${kucing}* ᴛᴏ ʟᴇᴠᴇʟ *${kucing + 1}*\n│ᴇxᴘ : *${_kucing}* -> *${kucing *1000}*` : '' || kucing == 5 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Kuda ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n│Exp *${_kuda}* -> *${kuda *1000}*` : '' || kuda == 5 ? '*Max Level*' : ''}
+│❏ ᴋᴜᴅᴀ : ${kuda == 0 ? '❌' : '' || kuda > 0 && kuda < 5 ? `ʟᴇᴠᴇʟ *${kuda}* ᴛᴏ ʟᴇᴠᴇʟ *${kuda + 1}*\n│ᴇxᴘ : *${_kuda}* -> *${kuda *1000}*` : '' || kuda == 5 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Naga ${naga == 0 ? 'Tidak Punya' : '' || naga > 0 && naga < 20 ? `Level *${naga}* To level *${naga + 1}*\n│Exp *${_naga}* -> *${naga *10000}*` : '' || naga == 20 ? '*Max Level*' : ''}
+│❏ ɴᴀɢᴀ : ${naga == 0 ? '❌' : '' || naga > 0 && naga < 20 ? `ʟᴇᴠᴇʟ *${naga}* ᴛᴏ ʟᴇᴠᴇʟ *${naga + 1}*\n│ᴇxᴘ : *${_naga}* -> *${naga *10000}*` : '' || naga == 20 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Phonix ${phonix == 0 ? 'Tidak Punya' : '' || phonix > 0 && phonix < 15 ? `Level *${phonix}* To level *${phonix + 1}*\n│Exp *${_phonix}* -> *${phonix *10000}*` : '' || phonix == 15 ? '*Max Level*' : ''}
+│❏ ᴘʜᴏɴɪx : ${phonix == 0 ? '❌' : '' || phonix > 0 && phonix < 15 ? `ʟᴇᴠᴇʟ *${phonix}* ᴛᴏ ʟᴇᴠᴇʟ *${phonix + 1}*\n│ᴇxᴘ : *${_phonix}* -> *${phonix *10000}*` : '' || phonix == 15 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Kyubi ${kyubi == 0 ? 'Tidak Punya' : '' || kyubi > 0 && kyubi < 20 ? `Level *${kyubi}* To level *${kyubi + 1}*\n│Exp *${_kyubi}* -> *${kyubi *10000}*` : '' || kyubi == 20 ? '*Max Level*' : ''}
+│❏ ᴋʏᴜʙɪ : ${kyubi == 0 ? '❌' : '' || kyubi > 0 && kyubi < 20 ? `ʟᴇᴠᴇʟ *${kyubi}* ᴛᴏ ʟᴇᴠᴇʟ *${kyubi + 1}*\n│ᴇxᴘ : *${_kyubi}* -> *${kyubi *10000}*` : '' || kyubi == 20 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Centaur ${centaur == 0 ? 'Tidak Punya' : '' || centaur > 0 && centaur < 20 ? `Level *${centaur}* To level *${centaur + 1}*\n│Exp *${_centaur}* -> *${centaur *10000}*` : '' || centaur == 20 ? '*Max Level*' : ''}
+│❏ ᴄᴇɴᴛᴀᴜʀ : ${centaur == 0 ? '❌' : '' || centaur > 0 && centaur < 20 ? `ʟᴇᴠᴇʟ *${centaur}* ᴛᴏ ʟᴇᴠᴇʟ *${centaur + 1}*\n│ᴇxᴘ : *${_centaur}* -> *${centaur *10000}*` : '' || centaur == 20 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Griffin ${griffin == 0 ? 'Tidak Punya' : '' || griffin > 0 && griffin < 15 ? `Level *${griffin}* To level *${griffin + 1}*\n│Exp *${_griffin}* -> *${griffin *10000}*` : '' || griffin == 15 ? '*Max Level*' : ''}
+│❏ ɢʀɪғғɪɴ : ${griffin == 0 ? '❌' : '' || griffin > 0 && griffin < 15 ? `ʟᴇᴠᴇʟ *${griffin}* ᴛᴏ ʟᴇᴠᴇʟ *${griffin + 1}*\n│ᴇxᴘ : *${_griffin}* -> *${griffin *10000}*` : '' || griffin == 15 ? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────
 ╭────────────────
-│Serigala ${serigala == 0 ? 'Tidak Punya' : '' || serigala > 0 && serigala < 15 ? `Level *${serigala}* To level *${serigala + 1}*\n│Exp *${_serigala}* -> *${serigala *10000}*` : '' || serigala == 15? '*Max Level*' : ''}
+│❏ sᴇʀɪɢᴀʟᴀ : ${serigala == 0 ? '❌' : '' || serigala > 0 && serigala < 15 ? `ʟᴇᴠᴇʟ *${serigala}* ᴛᴏ ʟᴇᴠᴇʟ *${serigala + 1}*\n│ᴇxᴘ : *${_serigala}* -> *${serigala *10000}*` : '' || serigala == 15? '*ᴍᴀx ʟᴇᴠᴇʟ*' : ''}
 ╰────────────────\n\n
-*Achievement*
-1.Top level *${userslevel.indexOf(m.sender) + 1}* dari *${userslevel.length}*
-2.Top Money *${usersmoney.indexOf(m.sender) + 1}* dari *${usersmoney.length}*
-3.Top Diamond *${usersdiamond.indexOf(m.sender) + 1}* dari *${usersdiamond.length}*
-4.Top Potion *${userspotion.indexOf(m.sender) + 1}* dari *${userspotion.length}*
-5.Top Common *${userscommon.indexOf(m.sender) + 1}* dari *${userscommon.length}*
-6.Top Uncommon *${usersuncommon.indexOf(m.sender) + 1}* dari *${usersuncommon.length}*
-7.Top Mythic *${usersmythic.indexOf(m.sender) + 1}* dari *${usersmythic.length}*
-8.Top Legendary *${userslegendary.indexOf(m.sender) + 1}* dari *${userslegendary.length}*
-9.Top Sampah *${userssampah.indexOf(m.sender) + 1}* dari *${userssampah.length}*
+⬣──〔 ᴀ ᴄ ʜ ɪ ᴇ ᴠ ᴇ ᴍ ᴇ ɴ ᴛ 〕──⬣
+❏ ᴛᴏᴘ ʟᴇᴠᴇʟ : *${userslevel.indexOf(m.sender) + 1}* ᴅᴀʀɪ *${userslevel.length}*
+❏ ᴛᴏᴘ ᴍᴏɴᴇʏ : *${usersmoney.indexOf(m.sender) + 1}* ᴅᴀʀɪ *${usersmoney.length}*
+❏ ᴛᴏᴘ ᴅɪᴀᴍᴏɴᴅ : *${usersdiamond.indexOf(m.sender) + 1}* dari *${usersdiamond.length}*
+❏ ᴛᴏᴘ ᴘᴏᴛɪᴏɴ : *${userspotion.indexOf(m.sender) + 1}* ᴅᴀʀɪ *${userspotion.length}*
+❏ ᴛᴏᴘ ᴄᴏᴍᴍᴏɴ : *${userscommon.indexOf(m.sender) + 1}* ᴅᴀʀɪ *${userscommon.length}*
+❏ ᴛᴏᴘ ᴜɴᴄᴏᴍᴍᴏɴ : *${usersuncommon.indexOf(m.sender) + 1}* ᴅᴀʀɪ *${usersuncommon.length}*
+❏ ᴛᴏᴘ ᴍʏᴛʜɪᴄ : *${usersmythic.indexOf(m.sender) + 1}* ᴅᴀʀɪ *${usersmythic.length}*
+❏ ᴛᴏᴘ ʟᴇɢᴇɴᴅᴀʀʏ : *${userslegendary.indexOf(m.sender) + 1}* ᴅᴀʀɪ *${userslegendary.length}*
+❏ ᴛᴏᴘ sᴀᴍᴘᴀʜ : *${userssampah.indexOf(m.sender) + 1}* ᴅᴀʀɪ *${userssampah.length}*
 \n${readMore}
 `.trim()
     conn.reply(m.chat, str, m)
@@ -223,7 +232,7 @@ Serigala: *${serigala == 0 ? 'Tidak Punya' : '' || serigala == 1 ? 'Level 1' : '
 handler.help = ['inv']
 handler.tags = ['rpg']
 handler.command = /^(inv|inventory)$/i
-handler.limit = true
+handler.limit = false
 handler.group = true
 module.exports = handler
 
