@@ -27,6 +27,6 @@ let handler = async (m, { conn }) => {
 handler.help = ['ppcouple', 'ppcp']
 handler.tags = ['internet']
 handler.command = /^(pp(cp|couple))$/i
-handler.limit = true
+handler.limit = false
 
 export default handler 
