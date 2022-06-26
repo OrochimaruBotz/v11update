@@ -1,6 +1,6 @@
 let handler = async (m, { conn, command }) => {
 let funix = `https://api.zacros.my.id/randomimg/meme`
-    conn.sendButtonImg(m.chat, funix, 'Done', wm2, 'Next', `.meme`, m)
+    conn.sendButtonImg(m.chat, funix, 'Next', `.meme`, m)
 }
 handler.help = ['meme']
 handler.tags = ['internet']
