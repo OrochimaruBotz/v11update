@@ -924,7 +924,7 @@ global.dfail = (type, m, conn) => {
         rowner: 'Denied, Perintah ini hanya dapat digunakan oleh RenFunix',
         owner: 'Denied, Perintah ini hanya dapat digunakan oleh RenFunix',
         mods: 'Denied, Perintah ini hanya dapat digunakan oleh Moderator!',
-        premium: '*Premium Only*\n1 Bulan *IDR 5000*\n1 Tahun *IDR 15000*\n\nHubungi *owner* kami..', 
+        premium: '*Premium Only*\n1 Minggu *Rp 3.000*\n1 Bulan *Rp 10.000*\n\nHubungi *owner* kami jika berminat.', 
         banned: 'Denied, Perintah ini hanya untuk pengguna yang terbanned..',
         group: 'Denied, Perintah ini hanya dapat digunakan di grup!',
         private: 'Denied, Perintah ini hanya dapat digunakan di Chat Pribadi!',
