@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async(m, { conn }) => {
-  let res = await fetch('https://bx-hunter.herokuapp.com/api/randomvidhentai?apikey=d6IZOVLR')
+  let res = await fetch('https://bx-hunter.herokuapp.com/api/randomvidhentai?apikey=oQpiCHRf')
   if (!res.ok) throw await res.text()
   let json = await res.json()
   if (!json.url) throw 'Error!'
