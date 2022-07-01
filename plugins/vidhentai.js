@@ -4,7 +4,7 @@ let handler = async(m, { conn }) => {
   if (!res.ok) throw await res.text()
   let json = await res.json()
   if (!json.result) throw 'Error!'
-  conn.sendFile(m.chat, json.result, '', 'Nih', m)
+  conn.sendFile(m.chat, json.result, 'video_1.mp4', 'Nih', m)
 }
 handler.help = ['vidhentai']
 handler.tags = ['nsfw']
