@@ -3,8 +3,8 @@ let handler = async(m, { conn }) => {
   let res = await fetch('https://bx-hunter.herokuapp.com/api/randomvidhentai?apikey=d6IZOVLR')
   if (!res.ok) throw await res.text()
   let json = await res.json()
-  if (!json.result) throw 'Error!'
-  conn.sendFile(m.chat, json.result, 'video_1.mp4', 'Nih', m)
+  if (!json.video_1) throw 'Error!'
+  conn.sendFile(m.chat, json.video_1, '', 'Nih', m)
 }
 handler.help = ['vidhentai']
 handler.tags = ['nsfw']
