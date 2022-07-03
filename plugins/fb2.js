@@ -1,21 +1,17 @@
+import { facebookDl } from './scraper.js'
+import { savefrom } from '@bochilteam/scraper'
 
-let fetch = require('node-fetch')
-
-let handler = async (m, { conn, command, args, usedPrefix }) => {
-    if (!args[0]) return m.reply('Putting *URL* Facebook..')
-    if (!args[0].includes("facebook")) return m.reply(`Url is wrong..\n\n*Example:*\n${usedPrefix}fb https://www.facebook.com/juankcortavarriaoficial/videos/218237676749570/`)
-    let res = await fetch(`https://api.neoxr.eu.org/api/fb?url=${args[0]}&apikey=obSw1DxesD`)
-   
-    let json = await res.json()
-    if (!json.status) throw json
-    await m.reply('Sedang di proses..')
-    await conn.sendFile(m.chat, json.data[1].url, json.data[1].url, wm, m)
+let handler = async (m, { conn, args }) => {
+	if (!args[0]) throw 'Input URL'
+	let res = await facebookDl(args[0]).catch(async _ => await savefrom(args[0])).catch(_ => null)
+	if (!res) throw 'Can\'t download the post'
+	let url = res?.url?.[0]?.url || res?.url?.[1]?.url || res?.['720p'] || res?.['360p']
+	await m.reply('_In progress, please wait..._')
+	conn.sendMessage(m.chat, { video: { url }, caption: res?.meta?.title || '' }, { quoted: m })
 }
-handler.help = ['fb2'].map(v => v + ' <url>')
+handler.help = ['facebook2']
 handler.tags = ['downloader']
+handler.alias = ['fb2', 'fbdl2', 'facebook2', 'facebookdl2']
+handler.command = /^((facebook|fb)(dl)?)$/i
 
-handler.command = /^f((b|acebook|)(dl|download)?(er)?(2)?)$/i
-handler.limit = false
-handler.group = true
-
-module.exports = handler
+export default handler
