@@ -185,7 +185,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
     ], m)
-    /*let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
+    let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
@@ -219,7 +219,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                         }
                     }
                 }), { userJid: m.chat, quoted: m })
-                conn.relayMessage(m.chat, template.message, { messageId: template.key.id })*/
+                conn.relayMessage(m.chat, template.message, { messageId: template.key.id })
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
