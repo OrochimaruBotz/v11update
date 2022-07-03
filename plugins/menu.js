@@ -78,7 +78,7 @@ const defaultMenu = {
 
  © Flux Botz | 1.3
 ${'```WhatsApp Multi Device```'}
-`.trim(), './thumbnail.jpg', null, null, [
+`,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
@@ -180,11 +180,13 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
-    conn.sendHydrated(m.chat, text.trim(), '© Flux Botz', null, 'https://chat.whatsapp.com/JMv6TBnYGCe7NngMhLdGmb', 'GC Bot', '', '', [
-      ['Donate', '/donasi'],
-      ['Sewa Bot', '/sewa'],
-      ['Owner', '/owner']
+    conn.sendHydrated(m.chat, `*${ucapan()}, ${name} 👋*`, text.trim(), await genProfile(conn, m), [['Speedtest', _p + 'speed'], ['Owner', _p + 'owner']], false, { quoted: fkon, contextInfo: { externalAdReply: { showAdAttribution: true,
+mediaType: 'VIDEO',
+mediaUrl: 'https://telegra.ph/file/33e39b4943e67fd08d71e.jpg',
+title: 'Flux Botz',
+body: 'By RenFunix',
+thumbnail: fs.readFileSync("./thumbnail.jpg"),
+sourceUrl: 'https://chat.whatsapp.com/JMv6TBnYGCe7NngMhLdGmb'
     ], m)
     /*let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
     let res = await fetch(url)
