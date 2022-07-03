@@ -35,6 +35,7 @@ let tags = {
 }
 const defaultMenu = {
   before: `
+
 ╭──〔  𝐈𝐍𝐅𝐎 𝐔𝐒𝐄𝐑  〕─⬣
 ┃➵͜͡✪ 𝚄𝚂𝙴𝚁 : *%name*
 ┃➵͜͡✪ 𝚁𝙴𝙼𝙰𝙸𝙽𝙸𝙽𝙶 𝙻𝙸𝙼𝙸𝚃 : *%limit* 𝙻𝙸𝙼𝙸𝚃
@@ -77,7 +78,7 @@ const defaultMenu = {
 
  © Flux Botz | 1.3
 ${'```WhatsApp Multi Device```'}
-`,
+`.trim(), './thumbnail.jpg', null, null, [
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
