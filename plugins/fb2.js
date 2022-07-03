@@ -12,6 +12,6 @@ let handler = async (m, { conn, args }) => {
 handler.help = ['facebook2']
 handler.tags = ['downloader']
 handler.alias = ['fb2', 'fbdl2', 'facebook2', 'facebookdl2']
-handler.command = /^((facebook|fb)(dl)?)$/i
+handler.command = /^((facebook2|fb2)(dl2)?)$/i
 
 export default handler
