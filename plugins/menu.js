@@ -180,7 +180,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    */let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
+    /*let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
     conn.sendHydrated(m.chat, text.trim(), '© Flux Botz', null, 'https://chat.whatsapp.com/JMv6TBnYGCe7NngMhLdGmb', 'Group', '', '', [
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
