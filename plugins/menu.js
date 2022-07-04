@@ -191,17 +191,17 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                             hydratedFooterText:'© JarsPy',
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Official Bot Group',
+                                    displayText: '⤿ Official Bot Group',
                                     url: 'https://chat.whatsapp.com/JMv6TBnYGCe7NngMhLdGmb'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Donasi',
+                                    displayText: '☰ Donasi',
                                     id: '/donasi'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner',
+                                    displayText: '☰ Owner',
                                     id: '/owner'
                                 }
                             }]
