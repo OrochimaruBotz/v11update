@@ -1,15 +1,16 @@
-let fetch = require('node-fetch')
+import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ')
-  if (!args[0]) throw 'Masukkan Text'
-  m.reply('*Wait ngab*\nProses...')
-  let res = `https://caliphapi.com/api/rem?text=${response}&text2=Jars&apikey=ELYASXD`
-  conn.sendFile(m.chat, res, 'kaneki.jpg', `Sudah jadi`, m, false)
+let response = args.join(' ').split('|')
+  if (!args[0]) throw 'Masukkan Parameter'
+  m.reply('proses..')
+  let res = `https://ziy.herokuapp.com/api/maker/rem?nama=${response[0]}&apikey=xZiyy`
+  conn.sendFile(m.chat, res, 'rem.jpg', `Nih`, m, false)
 }
-handler.help = ['logorem'].map(v => v + ' <teks>')
+handler.help = ['logorem'].map(v => v + ' <text|text>')
 handler.tags = ['maker']
 handler.command = /^(logorem)$/i
-handler.limit = true
 handler.register = false
 
-module.exports = handler
+handler.limit = true
+
+export default handler

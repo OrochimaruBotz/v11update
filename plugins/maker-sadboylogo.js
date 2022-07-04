@@ -1,15 +1,14 @@
-let fetch = require('node-fetch')
+import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ').split('|')
-   if (!args[0]) return m.reply('masukkan text1 dan text2\n\nContoh: .sadboylogo Jars|Funix')
-   m.reply('*Wait*\nProses...')
-  let res = `https://melcanz.com/sadboy?nama=${response[0]}&nama2=${response[1]}&apikey=dUtJxxvp`
-  conn.sendFile(m.chat, res, 'sadboy.jpg', `Sudah Jadi`, m, false)
+let response = args.join(' ').split('|')
+  if (!args[0]) throw 'Masukkan Parameter'
+  m.reply('proses..')
+  let res = `https://ziy.herokuapp.com/api/maker/sadboy?text1=${response[0]}&text2=${response[1]}&apikey=xZiyy`
+  conn.sendFile(m.chat, res, 'gfx3.jpg', `Nih`, m, false)
 }
 handler.help = ['sadboylogo'].map(v => v + ' <text|text>')
 handler.tags = ['maker']
-handler.command = /^(sadboylogo)$/i
-handler.premium = true
+handler.command = /^(logosadboy)$/i
 handler.limit = true
 
-module.exports = handler
+export default handler
