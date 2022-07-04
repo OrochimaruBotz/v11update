@@ -179,7 +179,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
     ], m)*/
-    let url = `https://drive.google.com/file/d/1HMz-sXUx2bhLOiH6LNVkNliJ3xTE2mbE/view?usp=drivesdk`.trim()
+    let pp = './「  JarsPy  」.pdf'.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
