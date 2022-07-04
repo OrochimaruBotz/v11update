@@ -1,29 +1,21 @@
-const uploadImage = require('../lib/uploadImage') 
-const { sticker } = require('../lib/sticker')
-
-let handler = async (m, { conn, text, usedPrefix }) => {
- try {
-  let [teks, teks2] = text.split('|')
-  let q = m.quoted ? m.quoted : m
-  let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw 'Tidak ada foto'
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
-  let img = await q.download()
-  let url = await uploadImage(img)
-  let wasted = `https://api.memegen.link/images/custom/${teks}/${teks2}.png?background=${url}`
-//  let wasted = `http://docs-jojo.herokuapp.com/api/meme-gen?top=${teks}&bottom=${teks2}&img=${url}`
-  let stiker = await sticker(null, wasted, packname, author)
-  conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
- } catch (e) {
-   m.reply(`Masukan format!!\nReply image dengan caption ${usedPrefix}smeme teks1|teks2\n*Jangan reply sticker*`)
-  }
+import uploadImage from '../lib/uploadImage.js'
+import { sticker } from '../lib/sticker.js'
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+    let [atas, bawah] = text.split`|`
+    let q = m.quoted ? m.quoted : m
+    let mime = (q.msg || q).mimetype || ''
+    if (!mime) throw `balas gambar dengan perintah\n\n${usedPrefix + command} <${atas ? atas : 'teks atas'}>|<${bawah ? bawah : 'teks bawah'}>`
+    if (!/image\/(jpe?g|png)/.test(mime)) throw `_*Mime ${mime} tidak didukung!*_`
+    let img = await q.download()
+    let url = await uploadImage(img)
+    let meme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas ? atas : '')}/${encodeURIComponent(bawah ? bawah : '')}.png?background=${url}`
+    let stiker = await sticker(false, meme, global.packname, global.author)
+    if (stiker) await conn.sendFile(m.chat, stiker, '', author, m, '', { asSticker: 1 })
 }
-handler.help = ['smeme']
-handler.tags = ['sticker']
-handler.command = /^smeme$/i
+handler.help = ['smeme <teks atas>|<teks bawah>']
+handler.tags = ['tools']
+handler.command = /^(smeme)$/i
 
-handler.limit = false
+handler.limit = true
 
-handler.fail = null
-
-module.exports = handler
+export default handler
