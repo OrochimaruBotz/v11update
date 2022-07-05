@@ -921,16 +921,16 @@ conn.ws.on('CB:call', async (json) => {
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: 'Denied, Perintah ini hanya dapat digunakan oleh RenFunix',
-        owner: 'Denied, Perintah ini hanya dapat digunakan oleh RenFunix',
+        rowner: 'Denied, Perintah ini hanya dapat digunakan oleh JarsPy',
+        owner: 'Denied, Perintah ini hanya dapat digunakan oleh JarsPy',
         mods: 'Denied, Perintah ini hanya dapat digunakan oleh Moderator!',
-        premium: '*Premium Only*\n1 Minggu *Rp 3.000*\n1 Bulan *Rp 10.000*\n\nHubungi *owner* kami jika berminat.', 
+        premium: '*Premium Only*\n1 Minggu *Rp 7.000*\n1 Bulan *Rp 15.000*\n\nHubungi *Owner* kami jika berminat.', 
         banned: 'Denied, Perintah ini hanya untuk pengguna yang terbanned..',
         group: 'Denied, Perintah ini hanya dapat digunakan di grup!',
         private: 'Denied, Perintah ini hanya dapat digunakan di Chat Pribadi!',
         admin: 'Denied, Perintah ini hanya untuk *Admin* grup!',
         botAdmin: 'Denied, Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
+        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Jars.19*',
         restrict: 'Fitur ini di *disable*!'
     }[type]
     if (msg) return m.reply(msg)

@@ -234,7 +234,7 @@ console.log(color(tampilTanggal, "pink"));
 console.log(color(tampilWaktu, "pink"));
 console.log(color(tampilHari, "pink"));
 
-CFonts.say('Lightweight\nWhatsApp Aine Bot', {
+CFonts.say('Lightweight\nJarsPy Multi Device', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
