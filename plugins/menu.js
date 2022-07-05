@@ -174,12 +174,12 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    /*let url = `https://telegra.ph/file/33e39b4943e67fd08d71e.jpg`.trim()
+    /*let url = `https://telegra.ph/file/115fc6e00bcfc30b995f4.jpg`.trim()
     conn.sendHydrated(m.chat, text.trim(), '© Flux Botz', null, 'https://chat.whatsapp.com/JMv6TBnYGCe7NngMhLdGmb', 'Group', '', '', [
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
     ], m)*/
-    let url = `https://drive.google.com/file/d/1HMz-sXUx2bhLOiH6LNVkNliJ3xTE2mbE/view?usp=drivesdk`.trim()
+    let url = `https://telegra.ph/file/115fc6e00bcfc30b995f4.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
