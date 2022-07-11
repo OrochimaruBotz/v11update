@@ -1,24 +1,51 @@
-let fetch = require('node-fetch')
-let handler = async(m, { conn }) => {
-    let user = db.data.users[m.sender]
-    if (user.reward === 1) throw `Kamu sudah mengeclaim hadiah reward JarsPy 1.6! Tunggu hadiah nya next update ya!`
-    if (user.reward === 0) {
-        await conn.sendMessage(m.chat, await(await fetch(thumbfoto)).buffer(), `Terimakasih sudah menggunakan JarsPy, hingga sekarang JarsPy sudah berjalan selama 1 bulan lebih.\nBerikut hadiah mu:
+const free = 50000000
+const prem = 50000000
+const moneyfree = 50000000
+const moneyprem = 50000000
+const timeout = 31536000000
 
-Limit = 5000
-EXP = 200.000
-
-Tunggu update selanjutnya ya!`.trim(), watermark, 'Profile', '.inv')
-        user.reward += 1
-        user.limit += 5000
-        user.exp += 200000
-    }
-}
-handler.help = ['reward']
+let handler = async (m, { conn, isPrems }) => {
+    let time = global.db.data.users[m.sender].lastclaim + 31536000000
+  if (new Date - global.db.data.users[m.sender].lastclaim < 31536000000) throw `Kamu sudah mengambil Event Reward`
+      //  conn.reply(m.chat, `:`, m)
+        global.db.data.users[m.sender].exp += isPrems ? prem : free
+        global.db.data.users[m.sender].money += isPrems ? moneyprem : moneyfree
+       // global.db.data.users[m.sender].potion += 5
+        conn.reply(m.chat, `JarsPy 1.7 Update Reward, Terimakasih sudah menggunakan JarsPy Bot hingga saat ini\nReward :\n\n+${isPrems ? prem : free} Exp\n+${isPrems ? moneyprem : moneyfree} Money`, m)
+        global.db.data.users[m.sender].lastclaim = new Date * 1
+        setTimeout(() => {
+					conn.reply(m.chat, `Kamu sudah mengambil Event Reward`, m)
+					}, timeout)
+    } 
+handler.help = ['eventreward']
 handler.tags = ['rpg']
-
-handler.command = /^(reward)$/i
+handler.command = /^(eventreward)$/i
+handler.owner = false
+handler.mods = false
 handler.premium = false
-handler.register = true
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
+handler.fail = null
+handler.money = 0
+handler.exp = 0
 handler.limit = false
+
 module.exports = handler
+
+function msToTime(duration) {
+  var milliseconds = parseInt((duration % 1000) / 100),
+    seconds = Math.floor((duration / 1000) % 60),
+    minutes = Math.floor((duration / (1000 * 60)) % 60),
+    hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+    
+  
+  hours = (hours < 10) ? "0" + hours : hours
+  minutes = (minutes < 10) ? "0" + minutes : minutes
+  seconds = (seconds < 10) ? "0" + seconds : seconds
+
+  return hours + " jam " + minutes + " menit " + seconds + " detik"
+}
