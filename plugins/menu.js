@@ -35,7 +35,7 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-_JarsPy Multi Device | Official Bot Account_
+_GojoBotzMD Multi Device | Official Bot Account_
 
 ❏ Username : *%name*
 
@@ -70,7 +70,7 @@ Hello *%name* , Here my command list.
 Base Script : *Aiinee*
 Recode Script : *Private*
 
- © JarsPy
+ © Humanz
 ${'```WhatsApp Multi Device```'}
 `,
 }
@@ -175,7 +175,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     /*let url = `https://telegra.ph/file/115fc6e00bcfc30b995f4.jpg`.trim()
-    conn.sendHydrated(m.chat, text.trim(), '© Flux Botz', null, 'https://chat.whatsapp.com/JMv6TBnYGCe7NngMhLdGmb', 'Group', '', '', [
+    conn.sendHydrated(m.chat, text.trim(), '©GojoBotzMD', null, 'https://chat.whatsapp.com/JMv6TBnYGCe7NngMhLdGmb', 'Group', '', '', [
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
     ], m)*/
@@ -188,7 +188,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                         hydratedTemplate: {
                             imageMessage: message.imageMessage,
                             hydratedContentText: text.trim(),
-                            hydratedFooterText:'© JarsPy',
+                            hydratedFooterText:'© Humanz',
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'Official Bot Group',
