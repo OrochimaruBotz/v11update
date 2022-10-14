@@ -921,8 +921,8 @@ conn.ws.on('CB:call', async (json) => {
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: 'Denied, Perintah ini hanya dapat digunakan oleh JarsPy',
-        owner: 'Denied, Perintah ini hanya dapat digunakan oleh JarsPy',
+        rowner: 'Denied, Perintah ini hanya dapat digunakan oleh Humanz',
+        owner: 'Denied, Perintah ini hanya dapat digunakan oleh Humanz',
         mods: 'Denied, Perintah ini hanya dapat digunakan oleh Moderator!',
         premium: '*Premium Only*\n1 Minggu *Rp 7.000*\n1 Bulan *Rp 15.000*\n\nHubungi *Owner* kami jika berminat.', 
         banned: 'Denied, Perintah ini hanya untuk pengguna yang terbanned..',
