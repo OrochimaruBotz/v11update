@@ -42,7 +42,7 @@ const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
   var sticker_name = '2022'
-  var sticker_author = 'JarsPy'
+  var sticker_author = 'Humanz'
 } else {
   var sticker_name = stickerpack.spackname
   var sticker_author = stickerpack.sauthor
