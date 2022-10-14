@@ -174,12 +174,12 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    /*let url = `https://telegra.ph/file/115fc6e00bcfc30b995f4.jpg`.trim()
+    /*let url = `https://telegra.ph/file/cf0039df7ac9f7cc94fa1.jpg`.trim()
     conn.sendHydrated(m.chat, text.trim(), '©GojoBotzMD', null, 'https://chat.whatsapp.com/JMv6TBnYGCe7NngMhLdGmb', 'Group', '', '', [
       ['Sewa Bot', '/sewa'],
       ['Owner', '/owner']
     ], m)*/
-    let url = `https://telegra.ph/file/115fc6e00bcfc30b995f4.jpg`.trim()
+    let url = `https://telegra.ph/file/cf0039df7ac9f7cc94fa1.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
